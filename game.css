@@ -1,0 +1,14 @@
+.container {
+	border: 2px solid #eee;
+	width: 90%;
+	float: left;
+}
+
+img {
+	width: 250px;
+	height: 200px;
+}
+
+div {
+	border: 3px dashed red;
+}
