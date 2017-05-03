@@ -1,12 +1,24 @@
-var userChoice = prompt("Do you choose rock, paper, scissors, lizard or Spock?");
 var userSelectionBox = document.getElementById("userSelection");
 var computerSelectionBox = document.getElementById("computerSelection");
 var verdict = document.getElementById("verdict");
 var computerSelection = 0;
+var possibleChoices = ['rock', 'paper', 'scissors', 'lizard', 'Spock'];
+
+//Determine user's selection
+var userChoice = prompt("Do you choose rock, paper, scissors, lizard or Spock?");
+//Make sure selection is a valid one
+function findUserChoice(userChoice){
+	console.log("user choice = " + userChoice);
+	return userChoice;
+}
+if(possibleChoices.findIndex(findUserChoice) >= 0){
+	console.log("User choice is valid.");
+} else {
+	console.log("User choice is INVALID!");
+}
 
 //Determine computer's selection
 var randomNum = Math.floor(Math.random() * 5) + 1;
-console.log(randomNum);
 
 switch (randomNum) {
 	case 1:
@@ -37,7 +49,7 @@ switch (randomNum) {
 
 switch (userChoice) {
     case 'rock':
-	console.log("User chooses: " + userChoice);
+	console.log(userChoice);
 	userSelectionBox.innerHTML = "<img src='images/rock.png' />";
 	break;
     case 'paper':
@@ -57,8 +69,9 @@ switch (userChoice) {
 	userSelectionBox.innerHTML = "<img src='images/spock.jpg' />";
 	break;
     default:
-	alert("Incorrect choice. Please choose again.");
-	userChoice = prompt("Do you choose rock, paper, scissors, lizard or Spock?");
+	// alert("Incorrect choice. Please choose again.");
+	// userChoice = prompt("Do you choose rock, paper, scissors, lizard or Spock?");
+	console.log("Not a valid choice.");
 	break;
 }
 
@@ -68,8 +81,6 @@ var result = compare(userChoice, computerSelection);
 var resultText = document.querySelector("span");
 console.log("Who wins: " + result);
 resultText.textContent = result;
-
-
 
 function compare(choice1, choice2){
 	if(choice1 === choice2){
@@ -126,4 +137,3 @@ function compare(choice1, choice2){
 		}
 	}
 }
-
