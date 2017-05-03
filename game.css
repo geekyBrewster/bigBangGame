@@ -1,7 +1,5 @@
-.container {
-	border: 2px solid #eee;
-	width: 90%;
-	float: left;
+body {
+	background-color: #5f4e66;
 }
 
 img {
@@ -9,6 +7,53 @@ img {
 	height: 200px;
 }
 
-div {
-	border: 3px dashed red;
+footer {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 28px;
+}
+
+header {
+	text-align: center;
+	font-size: 24px;
+}
+
+.container,
+header,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+  background-color: #f9eaff;
+  border-radius: 6px;
+}
+
+.container {
+	text-align: center;
+	display: block;
+	width: 50%;
+	margin: 10px auto;
+}
+
+.container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+.container {
+  background: #efe8f2;
+  clear: both;
+  *zoom: 1;
+}
+
+.text {
+  margin: 0 1.5%;
+  float: left;
+  width: 30%;
+}
+
+.image {
+  margin: 5px 1.5%;
+  float: right;
+  width: 60%;
 }
